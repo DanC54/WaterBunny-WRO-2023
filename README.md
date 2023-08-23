@@ -33,18 +33,18 @@ In order to have complete control of the DC motor, we have to control its direct
 - H-Bridge - To control the direction of rotation.
 
 The speed of the DC motor can be controlled by changing the input voltage. A common approach to doing this is to use PWM (Pulse Width Modulation). The direction of rotation of the DC motor can be controlled by changing the polarity of the input voltage.
-- ![l298n](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/1b7ed924-6556-4dc4-b50d-2490e4e885bc)
+- ![l298n](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/1b7ed924-6556-4dc4-b50d-2490e4e885bc =400x250)
 
 
 ### DC Motor
 The motor works on the principle of Lorentz force, which states: “Any conductor in which an electric current flows and is located in an external magnetic field is acted upon by a force, and the direction of the force is perpendicular to both the direction of the magnetic field and the direction of the electric current.”. DC motors are necessary in our solution in order to turn the axel of wheels to move the robot forward or backward. The steering is also controlled by the DC motor, as it would allow for the faster rotation speed compared to the servo motor.
-- ![DCmotor](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/6beb0c59-4703-41b5-9c52-2a85a4ce005a)
+- ![DCmotor](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/6beb0c59-4703-41b5-9c52-2a85a4ce005a =250x250)
 
 
 ### Raspberry PI Camera v2.1
 
 The camera works on capturing images continuously and the images consist of pixels - each pixel carrying only one color. The images taken by the camera are sent to the Raspberry PI to be analyzed based on the computer vision library `opencv`, so that the Raspberry will recognize the pixels which carry the color in our selected color range. It will then separate it and make a masking for it to be used in the rest of the code.
-- ![Pi-Camera-V2-1-800x800](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/2806164d-da7a-4db9-929a-530604cc3373)
+- ![Pi-Camera-V2-1-800x800](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/2806164d-da7a-4db9-929a-530604cc3373 =300x300)
 
 
 ## Software
