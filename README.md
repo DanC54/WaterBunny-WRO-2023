@@ -32,7 +32,7 @@ This repository consists of 3 main parts: `hardware`, `software` and `module des
 
 ### On Raspberry PI (Server)
 
-- Our robot uses Raspian OS 32 bits, officially supplied operating system by Raspberry Pi Foundation. To install the operating system, you must have a microSD. First install the Raspberry Pi Imager and then choose the `Raspbian OS 32 bits (Recommended)` option from the list (NOTE: All the data on the microSD will be formatted and deleted. Don't forget to backup all important files)
+- Our robot uses Raspian OS 32 bits, officially supplied operating system by Raspberry Pi Foundation. To install the operating system, you must have a microSD. First install the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) and then choose the `Raspbian OS 32 bits (Recommended)` option from the list (NOTE: All the data on the microSD will be formatted and deleted. Don't forget to backup all important files)
 
 - After the Raspian is installed, we must enable *SSH*, *VNC* and *Legacy Camera* support using the `sudo raspi-config` command from the terminal. Go to Interface Options -> Enable Legacy Camera support/SSH/VNC and enable them one by one. Apply the changes and reboot.
 - ![image](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/b6a2a92c-061d-475d-bf80-af56c3fb5d5d)
