@@ -56,6 +56,9 @@ pip install -U vidgear[core]
   pip install dxcam
   ```     
 
+- Install Visual Studio Code. Then install the `Remote - SSH` extension. ![image](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/4f8ae844-0d13-4bdb-a362-a93e58f8db40). 
+
+
 - Make sure that the `TCP port 5454` is forwarded. You probably don't have to worry about it, as it almost always is. In case it isn't forwarded, check this guide. 
 
 
