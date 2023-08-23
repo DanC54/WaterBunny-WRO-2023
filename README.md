@@ -56,10 +56,11 @@ pip install -U vidgear[core]
   pip install dxcam
   ```     
 
-- Install Visual Studio Code. Then install the `Remote - SSH` extension. ![image](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/4f8ae844-0d13-4bdb-a362-a93e58f8db40). 
+- Install Visual Studio Code. Then install the `Remote - SSH` extension. ![image](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/f659d4cc-ee8c-46ec-910b-5b5135142366). After that choose the `Connect to Host` option. ![image](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/9aea72c2-2ae2-4f8e-8e27-8c01cf7388fe) and enter the `ssh [username]@[Raspberry Pi's IPv4 address]` into the pop-up menu.  ![image](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/7b30b04a-409b-4310-9647-297294f88405)
 
 
-- Make sure that the `TCP port 5454` is forwarded. You probably don't have to worry about it, as it almost always is. In case it isn't forwarded, check this guide. 
+
+- Make sure that the `TCP port 5454` is forwarded. You probably don't have to worry about it, as it almost always is. In case it isn't forwarded, check [this guide](https://www.noip.com/support/knowledgebase/general-port-forwarding-guide).
 
 
 ## Module description
