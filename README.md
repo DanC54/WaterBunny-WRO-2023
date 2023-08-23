@@ -56,14 +56,14 @@ pip install -U vidgear[core]
   pip install dxcam
   ```     
 
-- Install Visual Studio Code. Then install the `Remote - SSH` extension.
+  Install Visual Studio Code. Then install the `Remote - SSH` extension.
 
 - ![image](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/f659d4cc-ee8c-46ec-910b-5b5135142366). 
 
-- After that choose the `Connect to Host` option...
+  After that choose the `Connect to Host` option...
 - ![image](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/9aea72c2-2ae2-4f8e-8e27-8c01cf7388fe) 
 
-- ...and enter the `ssh [username]@[Raspberry Pi's IPv4 address]` into the pop-up menu. 
+  ...and enter the `ssh [username]@[Raspberry Pi's IPv4 address]` into the pop-up menu. 
 
 - ![image](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/7b30b04a-409b-4310-9647-297294f88405)
 
