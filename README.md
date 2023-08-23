@@ -1,7 +1,7 @@
 Engineering materials
 ====
 
-This repository contains engineering materials of a self-driven vehicle's model participating in the WRO Future Engineers competition in the season 2022.
+This repository contains engineering materials of a self-driven vehicle's model participating in the WRO Future Engineers competition in the season 2023.
 
 ## Content
 
@@ -56,10 +56,31 @@ pip install -U vidgear[core]
   pip install dxcam
   ```     
 
-- Make sure that the TCP port 5454 is forwarded. You probably don't have to worry about it, as it almost always is. In case it isn't forwarded, check this guide. 
+- Make sure that the `TCP port 5454` is forwarded. You probably don't have to worry about it, as it almost always is. In case it isn't forwarded, check this guide. 
 
 
-## Module desription
+## Module description
 
-- GPIORobot.py
+### Server-side
+
+| Part          | Description   |  Server/Client     |
+| ------------- |-------------: |:-----------:  |
+| `GPIORobot.py`    |  Main library used for accessing Raspberry Camera and sending frames to client (PC) via `Netgear` framework. |  Server-side   |
+| `RobotApiLab.py`  |  A file containing class object of our robot. It is used for controlling servo and DC motors.   |   Server-side
+| `Qualify.py`      | Code for riding 3 laps around the game mat *wihout* any obstacles. |   Server-side  |
+| `Final.py`     | Code for riding 3 laps around the game mat *with* green and red obstacles.  |  Server-side   |
+| `Hawkeye.py`    |  A python file used to receive processed images from Raspberry PI to Client          |    Client-side   |
+
+
+
+`GPIORobot.py`: Main library used for accessing Raspberry Camera and sending frames to client (PC) via `Netgear` framework.
+- `RobotApiLab.py`: A file containing class object of our robot. It is used for controlling servo and DC motors.
+- `Qualify.py`: Code for riding 3 laps around the mat *wihout* any obstacles.
+- `Final.py`: Code for riding 3 laps around the mat *with* green and red obstacles.
+
+
+### Client-side
+
+- `Hawkeye.py`: 
+
 
