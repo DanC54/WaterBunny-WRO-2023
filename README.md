@@ -59,7 +59,7 @@ The camera works on capturing images continuously and the images consist of pixe
 ### Planning
 
 In order for us to avoid making any mistakes in the future, it was essential for us to know the algorithm behind the image scan. So that's why we've decided to create a flowchart to represent *barebone* algorithm that Raspberry PI will execute 
-![image](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/b2cc1d71-7226-43da-bd43-413cf00bf784)
+- ![image](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/b2cc1d71-7226-43da-bd43-413cf00bf784)
 
 
 
