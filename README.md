@@ -18,9 +18,9 @@ This repository consists of 3 main parts: `hardware`, `software` and `module des
 
 | Part          | Description   |
 | ------------- |-------------: |
-| Hardware      | Detailed explanation of all the physical parts of the robot, including sensors, cameras, motors |
-| Software      | Detailed explanation of all the steps to reproduce our solution, including library requirements, operational systems, IDEs, etc. |
-| Module description | Descriptions of python scripts with their purposes and algorithms  |
+| [Hardware](#Hardware)      | Detailed explanation of all the physical parts of the robot, including sensors, cameras, motors |
+| [Software](#Software)      | Detailed explanation of all the steps to reproduce our solution, including library requirements, operational systems, IDEs, etc. |
+| [Module description](#Module-description) | Descriptions of python scripts with their purposes and algorithms  |
 
 
 ## Hardware
