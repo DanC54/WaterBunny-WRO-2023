@@ -61,8 +61,6 @@ pip install -U vidgear[core]
 
 ## Module description
 
-### Server-side
-
 | Part          | Description   |  Server/Client     |
 | ------------- |-------------: |:-----------:  |
 | `GPIORobot.py`    |  Main library used for accessing Raspberry Camera and sending frames to client (PC) via `Netgear` framework. |  Server-side   |
@@ -79,8 +77,29 @@ pip install -U vidgear[core]
 - `Final.py`: Code for riding 3 laps around the mat *with* green and red obstacles.
 
 
+### Server-side
+
+`GPIORobot.py`: Contains `__work_f()` and `__send_frame()` functions that run on separate threads when `GPIORobot()` class is initialized. Initializes `Netgear` framework and sends frame via it.
+`RobotAPILab.py`: Runs `Servo.write()` function as a separate thread in order to avoid using `time.sleep()` function, allowing us to avoid overheating the L298 motor driver or DC motors.
+`Qualify.py`: Contains `black_line_left()` and `black_line_right()` functions to constantly search for walls and drive away from them.
+`Final.py`: Same as above, except the function `detect_box()` was added to determine the steering angle when the camera sees red and green obstacles. 
+
+
 ### Client-side
 
-- `Hawkeye.py`: 
+- `Hawkeye.py`: Connects to the `Netgear` framework in a `receive=True` mode. Replace the `address="192.168.x.xxx"` line with your *Client's* IPv4 address (You can get this by typing `ipconfig` into Windows terminal).
 
+You will have to modify the following code:
+
+```
+client = NetGear (
+    address="192.168.x.xxx",
+    port="5454",
+    protocol="tcp",
+    pattern=1,
+    receive_mode=True,
+    logging=True,
+    **options
+)
+```
 
