@@ -5,22 +5,61 @@ This repository contains engineering materials of a self-driven vehicle's model 
 
 ## Content
 
-* `t-photos` contains 2 photos of the team (an official one and one funny photo with all team members)
-* `v-photos` contains 6 photos of the vehicle (from every side, from top and bottom)
-* `video` contains the video.md file with the link to a video where driving demonstration exists
+* `team-photos` contains 2 photos of the team (an official one and one funny photo with all team members).
+* `robot-photos` contains 6 photos of the vehicle (from every side, from top and bottom).
+* `video` contains the video.md file with the link to a video where driving demonstration exists.
 * `schemes` contains one or several schematic diagrams in form of JPEG, PNG or PDF of the electromechanical components illustrating all the elements (electronic components and motors) used in the vehicle and how they connect to each other.
-* `src` contains code of control software for all components which were programmed to participate in the competition
-* `models` is for the files for models used by 3D printers, laser cutting machines and CNC machines to produce the vehicle elements. If there is nothing to add to this location, the directory can be removed.
-* `other` is for other files which can be used to understand how to prepare the vehicle for the competition. It may include documentation how to connect to a SBC/SBM and upload files there, datasets, hardware specifications, communication protocols descriptions etc. If there is nothing to add to this location, the directory can be removed.
+* `src` contains code of control software for all components which were programmed to participate in the competition.
 
 ## Introduction
 
-_This part must be filled by participants with the technical clarifications about the code: which modules the code consists of, how they are related to the electromechanical components of the vehicle, and what is the process to build/compile/upload the code to the vehicle’s controllers._
+This repository consists of 3 main parts: `hardware`, `software` and `module description`. 
 
-## How to prepare the repo based on the template
+| Part          | Description   |
+| ------------- |-------------: |
+| Hardware      | Detailed explanation of all the physical parts of the robot, including sensors, cameras, motors |
+| Software      | Detailed explanation of all the steps to reproduce our solution, including library requirements, operational systems, IDEs, etc. |
+| Module description | Descriptions of python scripts with their purposes and algorithms  |
 
-_Remove this section before the first commit to the repository_
 
-1. Clone this repo by using the `git clone` functionality.
-2. Remove `.git` directory
-3. [Initialize a new public repository on GitHub](https://github.com/new) by following instructions from "create a new repository on the command line" section (appeared after pressing "Create repository" button).
+## Hardware
+
+
+
+
+## Software
+
+### On Raspberry PI (Server)
+
+- Our robot uses Raspian OS 32 bits, officially supplied operating system by Raspberry Pi Foundation. To install the operating system, you must have a microSD. First install the Raspberry Pi Imager and then choose the `Raspbian OS 32 bits (Recommended)` option from the list (NOTE: All the data on the microSD will be formatted and deleted. Don't forget to backup all important files)
+
+- After the Raspian is installed, we must enable *SSH*, *VNC* and *Legacy Camera* support using the `sudo raspi-config` command from the terminal. Apply the changes and reboot.
+
+- In order to connect to Raspberry Pi via SSH, we must first know its IPv4 address. Make sure that the Rapsberry Pi and your PC are connected to the same network, and then type `hostname -I` command into the terminal. Remember this IP address. Next, open the terminal on your PC and type `ssh [username]@[ipv4address]`. It will ask for the final confirmation, type 'yes'.
+
+- Install all necessary libraries and dependancies by first upgrading pip (`pip3 install --upgrade pip`) and then running this command:
+
+```
+sudo apt-get update && sudo apt-get upgrade
+pip install opencv-python       
+pip install -U vidgear[core]
+```
+
+### On PC (Client)
+
+- Install the libraries (On Windows):
+  
+  ```
+  py -m pip install pip --upgrade
+  pip install opencv-python
+  pip install -U vidgear[core]
+  pip install dxcam
+  ```     
+
+- Make sure that the TCP port 5454 is forwarded. You probably don't have to worry about it, as it almost always is. In case it isn't forwarded, check this guide. 
+
+
+## Module desription
+
+- GPIORobot.py
+
