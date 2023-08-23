@@ -25,6 +25,15 @@ This repository consists of 3 main parts: `hardware`, `software` and `module des
 
 ## Hardware
 
+### Chassis
+
+A simple RC toy car was used as a base for our robot. We have since replaced both motors, implemented a different power method (using the batteries that were not wired into the car), replaced all wheels, and rewired and soldered every pin connection. 
+
+### Power management
+
+- We have used 2 rechargeble 3.2V lithium-ion batteries (3000 Mah) to power our motors. The voltage that we chose was sufficient enough to drive our robot, yet not big enough to burn down the L298 Motor Driver. 
+- In order to power up the Rapsberry Pi, we have decided to use a 5000 Mah power-bank, due to its size and weight. Due to being a little over 120g, it did not pose too much of a tension on our motors.
+
 ### L298n Motor Driver
   
 In order to have complete control of the DC motor, we have to control its direction and rotation. This can be achieved by combining these two methods:
@@ -45,6 +54,14 @@ The motor works on the principle of Lorentz force, which states: “Any conducto
 
 The camera works on capturing images continuously and the images consist of pixels - each pixel carrying only one color. The images taken by the camera are sent to the Raspberry PI to be analyzed based on the computer vision library `opencv`, so that the Raspberry will recognize the pixels which carry the color in our selected color range. It will then separate it and make a masking for it to be used in the rest of the code.
 ![Pi-Camera-V2-1-800x800](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/2806164d-da7a-4db9-929a-530604cc3373)
+
+
+### Planning
+
+In order for us to avoid making any mistakes in the future, it was essential for us to know the algorithm behind the image scan. So that's why we've decided to create a flowchart to represent *barebone* algorithm that Raspberry PI will execute 
+![image](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/b2cc1d71-7226-43da-bd43-413cf00bf784)
+
+
 
 
 ## Software
