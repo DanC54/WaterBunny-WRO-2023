@@ -33,8 +33,8 @@ Y2_LINE = 470
 
 X1_CUB = 30  # for sings detection
 X2_CUB = 625
-Y1_CUB = 190
-Y2_CUB = 460
+Y1_CUB = 220
+Y2_CUB = 430
 
 # initializing constants of ratio for controllers
 KP = 0.013  # the proportional gain, a tuning parameter for walls
@@ -241,7 +241,7 @@ def restart():  # function for resetting all the variables
 
     timer_flag = False
 
-    speed_def = 230
+    speed_def = 160
 
     u = 125
     e_old = 0
@@ -271,7 +271,7 @@ blue = 0
 
 u = 125  # variables for pd
 e_old = 0
-speed_def = 210
+speed_def = 160
 
 # initializing timers
 tim = time.time()  # for finish
@@ -316,6 +316,8 @@ time_fps = time.time()
 fps = 0
 fps_last = 0
 
+buttonFlag = False
+
 def telemetry(): # функция вывода телеметрии
     robot.text_to_frame(frame, 'a_red = ' + str(u_green), 10, 20,(255,122,122))
     robot.text_to_frame(frame, 'speed = ' + str(speed), 10, 40,(0,0,255))
@@ -331,6 +333,12 @@ def telemetry(): # функция вывода телеметрии
 
 
 while True:  # main loop
+
+    while True:
+        if robot._button.check() == True or buttonFlag == True:
+            buttonFlag = True
+            break
+    
     if time.time() - time_speed > 3:  # checking of the speed raising
         speed_def = 250
     # resetting controlling influence and speed
