@@ -42,7 +42,8 @@ In order to have complete control of the DC motor, we have to control its direct
 - H-Bridge - To control the direction of rotation.
 
 The speed of the DC motor can be controlled by changing the input voltage. A common approach to doing this is to use PWM (Pulse Width Modulation). The direction of rotation of the DC motor can be controlled by changing the polarity of the input voltage.
-![l298n](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/1b7ed924-6556-4dc4-b50d-2490e4e885bc)
+![l298n](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/1b7ed924-6556-4dc4-b50d-2490e4e885bc)![l298n](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/b8a687d7-8c32-461b-9ac1-307437016271)
+
 
 
 ### DC Motor
