@@ -42,25 +42,28 @@ In order to have complete control of the DC motor, we have to control its direct
 - H-Bridge - To control the direction of rotation.
 
 The speed of the DC motor can be controlled by changing the input voltage. A common approach to doing this is to use PWM (Pulse Width Modulation). The direction of rotation of the DC motor can be controlled by changing the polarity of the input voltage.
-![l298n](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/1b7ed924-6556-4dc4-b50d-2490e4e885bc)
+![l298n](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/06a660c3-8ba5-42b6-90da-4edc7f7138c7)
+
 
 
 
 ### DC Motor
 The motor works on the principle of Lorentz force, which states: “Any conductor in which an electric current flows and is located in an external magnetic field is acted upon by a force, and the direction of the force is perpendicular to both the direction of the magnetic field and the direction of the electric current.”. DC motors are necessary in our solution in order to turn the axel of wheels to move the robot forward or backward. The steering is also controlled by the DC motor, as it would allow for the faster rotation speed compared to the servo motor.
-![DCmotor](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/6beb0c59-4703-41b5-9c52-2a85a4ce005a)
+![DCmotor](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/5e496dd9-6107-49da-b64d-b49eff888e32)
 
 
 ### Raspberry PI Camera v2.1
 
 The camera works on capturing images continuously and the images consist of pixels - each pixel carrying only one color. The images taken by the camera are sent to the Raspberry PI to be analyzed based on the computer vision library `opencv`, so that the Raspberry will recognize the pixels which carry the color in our selected color range. It will then separate it and make a masking for it to be used in the rest of the code.
-![Pi-Camera-V2-1-800x800](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/2806164d-da7a-4db9-929a-530604cc3373)
+![Pi-Camera-V2-1-800x800](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/4f02dae5-e8df-4c94-9a48-c2f8a0f62de2)
+
 
 
 ### Planning
 
 In order for us to avoid making any mistakes in the future, it was essential for us to know the algorithm behind the image scan. So that's why we've decided to create a flowchart to represent *barebone* algorithm that Raspberry PI will execute 
-- ![image](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/b2cc1d71-7226-43da-bd43-413cf00bf784)
+- ![262763593-b2cc1d71-7226-43da-bd43-413cf00bf784](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/d5f806b6-1695-4083-a3d0-c68c3f0753e7)
+
 
 
 
@@ -72,7 +75,8 @@ In order for us to avoid making any mistakes in the future, it was essential for
 - Our robot uses Raspian OS 32 bits, officially supplied operating system by Raspberry Pi Foundation. To install the operating system, you must have a microSD. First install the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) and then choose the `Raspbian OS 32 bits (Recommended)` option from the list (NOTE: All the data on the microSD will be formatted and deleted. Don't forget to backup all important files)
 
 - After the Raspian is installed, we must enable *SSH*, *VNC* and *Legacy Camera* support using the `sudo raspi-config` command from the terminal. Go to Interface Options -> Enable Legacy Camera support/SSH/VNC and enable them one by one. Apply the changes and reboot.
-- ![image](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/b6a2a92c-061d-475d-bf80-af56c3fb5d5d)
+- ![What-is-Raspi-Config-Tool](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/bc73df2f-fb2d-4272-8513-06d703fd466c)
+
 
 
 - In order to connect to Raspberry Pi via SSH, we must first know its IPv4 address. Make sure that the Rapsberry Pi and your PC are connected to the same network, and then type `hostname -I` command into the terminal. Remember this IP address. Next, open the terminal on your PC and type `ssh [username]@[ipv4address]`. It will ask for the final confirmation, type 'yes'.
@@ -98,14 +102,14 @@ pip install -U vidgear[core]
 
   Install Visual Studio Code. Then install the `Remote - SSH` extension.
 
-- ![image](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/f659d4cc-ee8c-46ec-910b-5b5135142366). 
+- ![262748366-f659d4cc-ee8c-46ec-910b-5b5135142366](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/1053ac6d-0fb5-484d-85b2-7972f59d80ba)
 
   After that choose the `Connect to Host` option...
-- ![image](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/9aea72c2-2ae2-4f8e-8e27-8c01cf7388fe) 
+- ![262749011-9aea72c2-2ae2-4f8e-8e27-8c01cf7388fe](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/aa1309a0-954d-42c8-9cd7-54844ce5a0b1)
 
   ...and enter the `ssh [username]@[Raspberry Pi's IPv4 address]` into the pop-up menu. 
 
-- ![image](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/7b30b04a-409b-4310-9647-297294f88405)
+- ![262749602-7b30b04a-409b-4310-9647-297294f88405](https://github.com/DanC54/WaterBunny-WRO-2023/assets/59985928/d8aab634-0eeb-46d1-aaef-52b00ee1c63a)
 
 
 
